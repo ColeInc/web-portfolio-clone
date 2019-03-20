@@ -1,0 +1,46 @@
+.Content {
+    text-align: center;
+}
+
+.Content h1,
+.Content p {
+    font-weight: none;
+}
+  
+.red {
+    color: red;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.Main ul {
+    list-style: none;
+    background-color: #404040;
+    margin: 0px;
+    padding: 0px;
+}
+
+.Main li {
+    display: inline-block;
+    background-color: #404040;
+    /* margin: 20px; */
+    padding:20px;
+    /* float:left; */
+}
+
+.Main li:hover,
+.Main li:active {
+    display: inline-block;
+    background-color: #1a1a1a;
+    /* margin: 20px; */
+    padding:20px;
+}
+
+.Main a {
+    text-decoration: none;
+    /* display:block; */
+    color:white;
+    padding: 20px;
+}
