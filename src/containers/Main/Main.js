@@ -1,167 +1,59 @@
 import React, { Component } from 'react';
-import Radium, { StyleRoot } from 'radium';
+import { Route, Link } from 'react-router-dom';
 
-import Person from '../../components/Person/Person';
+//import Person from './Person/Person';
+import Start from './Start/Start';
+import About from './About/About';
 import './Main.css';
 
 class Main extends Component {
-    state = {
-        persons: [ //this is an array we are declaring inside state.
-            {id: '1', name: 'Cole', pet: 'Pug'},
-            {id: '2', name: 'Summer', pet: 'Holly'},
-            {id: '3', name: 'Reidy', pet: 'italian woG'}
-        ]
-    }
-
-    mainButtonHander = (newName) => {
-        //alert("Thank you for clicking me sir.");
-        this.setState( {
-            persons: [
-                {name: 'Cole', pet: 'Goldfish'},
-                {name: 'Summer', pet: 'Big Momma'},
-                {name: newName, pet: 'miloaf'}
-            ],
-            secondState: 'This is a second state (I have no idea why this is defined!)',
-            showPersons: false 
-        } )
-    }
-
-    nameChangeHandler = (event, id) => {
-        const personIndex = this.state.persons.findIndex(p => {
-            return p.id === id;
-        });
-
-        const person = {
-            ...this.state.persons[personIndex]
-        };
-        
-        person.name = event.target.value;
-        
-        const persons = [...this.state.persons];
-        persons[personIndex] = person;
-
-        this.setState({persons: persons})
-
-        //old way of doing it before dynamic updating in the render():
-
-        // this.setState({
-        //     persons: [
-        //         {name: 'Cole', pet: 'Pug'},
-        //         {name: event.target.value, pet: 'Holly'},
-        //         {name: 'Reidy', pet: 'italian woG'}
-        //     ]
-        // })
-    }
-
-    togglePersonsVisibleHandler = () => {
-        const doesShow = this.state.showPersons;
-        this.setState({showPersons: !doesShow}); //just toggling true/false on showPersons boolean in state.
-    }
-
-    deletePersonHandler = (index) => {
-        //const persons = this.state.persons.slice();
-        const persons = [...this.state.persons]; //this works exact same as above line but is the most modern ES6 way of doing things.
-        persons.splice(index, 1) //just removes the single array element at index value passed in
-        this.setState({persons: persons})
-    }
-
     render() {
-        const style = {
-            backgroundColor: 'grey',
-            color: 'white',
-            font: 'inherit',
-            width: '200px',
-            cursor: 'pointer', 
-            border: '1px solid black',
-            align: 'center',
-            padding: '8px',
-            ':hover': {
-                backgroundColor: 'lightgrey',
-                color: 'black'
-            }
-        };
-
-        let persons = null;
-        
-        if (this.state.showPersons) {
-            persons = (
-                <div>
-                    {this.state.persons.map((person, index) => {
-                        return <Person 
-                            name={person.name}
-                            pet={person.pet}
-                            click={() => this.deletePersonHandler(index)}
-                            key={person.id}
-                            changed={(event) => this.nameChangeHandler(event, person.id)}/>
-                    })}
-
-                    {/* This is the old way of listing each individual Person component, and then the contents of persons array above gets rendered to each one. Now, instead
-                    we are just mapping each value in the array of our personal data for each Person above using .map() to each <Person> component as you see in the line above. */}
-                    {/* <Person 
-                        name={this.state.persons[0].name} 
-                        pet={this.state.persons[0].pet} />
-                    <Person
-                        name={this.state.persons[1].name} 
-                        pet={this.state.persons[1].pet}
-                        click={this.mainButtonHander.bind(this, "yeeeet")}
-                        changed={this.nameChangeHandler}>Holly is a BIG girl</Person> {/*see how we pass this plain text in to person and how we use it within the person component }
-                    <Person 
-                        name={this.state.persons[2].name} 
-                        pet={this.state.persons[2].pet} 
-                        click={this.mainButtonHander.bind(this, 'Uncle Pete')}>pleasa some fooda</Person>
-
-                    {/*
-                    This is the layout we used before using state:
-                    <Person name="Cole" pet="Pug" />
-                    <Person name="Summer" pet="Holly">Holly is a BIG girl</Person> {see how we pass this plain text in to person and how we use it within the person component }
-                    <Person name="Reidy" pet="italian dog" /> 
-                    */}
-                </div>
-            );
-            
-            style.backgroundColor = 'black';
-            style[':hover'] = {
-                backgroundColor: 'darkgrey',
-                color: 'black'
-            };
+        const Andy = {
+            name: 'Andy Baeck',
+            desc: "Hi I'm Andy.",
+            phone: '',
+            email: "tbae@auckland",
+            photoURL: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'
         }
 
-        const classes = [];
-        if (this.state.persons.length < 3) {
-            classes.push('red')
-        }
-        if (this.state.persons.length < 2) {
-            classes.push('bold') //so basically we are legit just adding values to this class which are going to be id's of CSS effects we want to add onto the button.
+        const Cole = {
+            name: 'Cole McConnell',
+            desc: "As a recent graduate at the University of Auckland studying a BSc, majoring in Information Systems and Computer Science, I am now seeking to pursue a career in software development with correlation to front-end or back-end web development. I am in search of an environment which enables me to enrich and develop my skill set in this field further, while highlighting my current attributes which include my solid work ethic, love of problem solving, and time management skills.",
+            phone: '022 409 6224',
+            email: 'cmcc549@aucklanduni.ac.nz',
+            photoURL: 'http://i.imgur.com/zdvqdJS.jpg'
         }
 
         return (
-            <StyleRoot>
-                <div className="Main">
-                    <header>
-                        <nav>
-                            <ul>
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/">Andy</a></li>
-                                <li><a href="/">Cole</a></li>
-                            </ul>
-                        </nav>
-                    </header>
-                    <section className="Content">
-                        <h1>Sup lads</h1>
-                        <p className={classes.join(' ')}> {/*this is just converting the array of [red, bold] to a single string "red bold" */}
-                            its ya boy cole here
-                        </p>
-                        <button
-                            className={style}
-                            onClick={this.togglePersonsVisibleHandler}
-                            style={style}>Click me!
-                        </button>
-                        {persons}
-                    </section>
-                </div>
-            </StyleRoot>
+            <div className="Main">
+                <header className="Header">
+                    <nav>
+                        <ul>
+                            <Link to="/"><li>Home</li></Link>
+                            <Link to={{
+                                pathname: '/andy',
+                                hash: '', //this is for any hashtag to implement on the end of the URL, E.g. #submit that you sometimes see, etc. I think this is basically jumping to a certain place on a page, E.g. jump to section 4 half way down the page named #section4
+                                search: '' //similar to above, this is for any search query parameters, E.g. quick-submit=true that may be helpful in a search function.
+                            }}><li>Andy</li>
+                            </Link>
+                            <Link to={{ pathname: '/cole' }}>
+                                <li>Cole</li>
+                            </Link>
+                            <Link to={{ pathname: '/project' }}>
+                                <li>Project</li>
+                            </Link>
+                        </ul>
+                    </nav>
+                </header>
+                <Route path="/" exact component={Start} />
+                {/* <Route path="/andy" exact render={() => <About name={andy} />} /> */}
+                <Route path="/andy" exact render={() => <About name={Andy.name} desc={Andy.desc} phone={Andy.phone} email={Andy.email} />} />
+                <Route path="/cole" exact render={() => <About name={Cole.name} desc={Cole.desc} phone={Cole.phone} email={Cole.email} />} />
+                {/* <Route path="/project" exact component={} /> */}
+                {/* <Route path="/" render={() => <p>Test</p>} /> */}
+            </div>
         );
     }
 }
 
-export default Radium(Main);
+export default Main;

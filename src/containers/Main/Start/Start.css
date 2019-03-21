@@ -1,0 +1,32 @@
+.Start {
+    text-align: center;
+}
+
+.Start p {
+    width: 500px;
+    margin: auto;
+}
+
+.StartButton h1 {
+    color:white !important; /* for some reason Main.css is overridding this component's CSS... */
+    font-weight: 300;
+    margin-top: 120px;
+}
+
+.Start span {
+    
+    line-height: normal;
+}
+
+.StartButton {
+    background-color:#0099ff;
+    display: inline-block;
+    height: 300px;
+    width: 50%;
+}
+
+.StartButton:hover {
+    background-color:#1aa3ff;
+    display: inline-block;
+    width: 50%;
+}
