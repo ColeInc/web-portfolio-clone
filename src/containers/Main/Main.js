@@ -2,26 +2,38 @@ import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 
 //import Person from './Person/Person';
-import Start from './Start/Start';
-import About from './About/About';
+import Home from './Home/Home';
+import Profile from './Profile/Profile';
 import './Main.css';
 
 class Main extends Component {
     render() {
         const Andy = {
-            name: 'Andy Baeck',
-            desc: "Hi I'm Andy.",
-            phone: '',
-            email: "tbae@auckland",
-            photoURL: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'
+            "about": [{
+                name: 'Andy Baeck',
+                desc: "Hi I'm Andy.",
+                phone: '',
+                email: 'tbae@auckland',
+                photoURL: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'
+            }],
+
+            "skills": [{
+                languages: "F#"
+            }]
         }
 
         const Cole = {
-            name: 'Cole McConnell',
-            desc: "As a recent graduate at the University of Auckland studying a BSc, majoring in Information Systems and Computer Science, I am now seeking to pursue a career in software development with correlation to front-end or back-end web development. I am in search of an environment which enables me to enrich and develop my skill set in this field further, while highlighting my current attributes which include my solid work ethic, love of problem solving, and time management skills.",
-            phone: '022 409 6224',
-            email: 'cmcc549@aucklanduni.ac.nz',
-            photoURL: 'http://i.imgur.com/zdvqdJS.jpg'
+            'about': [{
+                name: 'Cole McConnell',
+                desc: 'As a recent graduate at the University of Auckland studying a BSc, majoring in Information Systems and Computer Science, I am now seeking to pursue a career in software development with correlation to front-end or back-end web development. I am in search of an environment which enables me to enrich and develop my skill set in this field further, while highlighting my solid work ethic, love of problem solving, and time management skills.',
+                phone: '022 409 6224',
+                email: 'cmcc549@aucklanduni.ac.nz',
+                photoURL: 'http://i.imgur.com/zdvqdJS.jpg'
+            }],
+
+            "skills": [{
+                languages: "Python, Java, HTML, CSS, Javascript, "
+            }]
         }
 
         return (
@@ -45,10 +57,13 @@ class Main extends Component {
                         </ul>
                     </nav>
                 </header>
-                <Route path="/" exact component={Start} />
+                <Route path="/" exact component={Home} />
+
                 {/* <Route path="/andy" exact render={() => <About name={andy} />} /> */}
-                <Route path="/andy" exact render={() => <About name={Andy.name} desc={Andy.desc} phone={Andy.phone} email={Andy.email} />} />
-                <Route path="/cole" exact render={() => <About name={Cole.name} desc={Cole.desc} phone={Cole.phone} email={Cole.email} />} />
+                {/* <Route path="/andy" exact render={props => <About name={Andy.about[0].name} desc={Andy.about[0].desc} phone={Andy.about[0].phone} email={Andy.about[0].email} />} /> */}
+                <Route path="/andy" exact render={props => <Profile profileData={Andy} />} />
+                <Route path="/cole" exact render={props => <Profile profileData={Cole} />} />
+                {/* <Route path="/cole" exact render={props => <About name={Cole.about[0].name} desc={Cole.about[0].desc} phone={Cole.about[0].phone} email={Cole.about[0].email} />} /> */}
                 {/* <Route path="/project" exact component={} /> */}
                 {/* <Route path="/" render={() => <p>Test</p>} /> */}
             </div>
