@@ -13,12 +13,12 @@ class Main extends Component {
                 name: 'Andy Baeck',
                 desc: "Hi I'm Andy.",
                 phone: '',
-                email: 'tbae@auckland',
+                email: 'hamento22@outlook.co.nz',
                 photoURL: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'
             }],
 
             "skills": [{
-                languages: "F#"
+                description: "This is a description of my skillset."
             }]
         }
 
@@ -32,7 +32,7 @@ class Main extends Component {
             }],
 
             "skills": [{
-                languages: "Python, Java, HTML, CSS, Javascript, "
+                description: "Strong understanding of Python and Java Programming Languages. Experience using HTML, CSS, and Javascript. Knowledge of SQL, C#, MIPS Assembly Language. Experience in functional programming using C#, F# and Javascript. Understanding of React Javascript Library."
             }]
         }
 

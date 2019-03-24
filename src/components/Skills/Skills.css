@@ -1,0 +1,78 @@
+.Skills {
+    overflow: hidden;
+    padding: 100px 0px 100px 0px;
+}
+
+.SkillsContainer {
+    width: 96%;
+    max-width: 1080px;
+    margin: 0 auto;
+    overflow:hidden;
+    /* background-color:red; */
+    margin-bottom:200px;
+}
+
+.Skills p {
+    color:#4d4d4d;
+}
+
+.Skills h1 {
+    color:black;
+    font-weight: 400;
+    margin-top:0px;
+}
+
+.skillsParagraph {
+    /* display: inline-block; */
+    width:100%;
+    /* float:left; */
+    border-bottom: 1px solid #d9d9d9;    
+}
+
+.paragraph a {
+    color:#cccccc;
+    text-decoration: none;
+}
+
+.paragraph a:hover { color:#a0a0a0; }
+
+.imageContainer {
+    display: inline-block;
+    /* float:right; */
+    /* background-color:white; */
+    vertical-align: top;
+    padding-left:60px;
+}
+
+.image {
+    width:220px;
+    height:220px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 1000px) {
+    .Skills {
+        padding: 20px 0px 20px 0px;
+    }
+
+    .SkillsContainer {
+        width:600px;
+        padding: 0px;
+    }
+    
+    .imageContainer {
+      display: none;
+    }
+
+    .paragraph {
+        width:100%;
+        float:none;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .SkillsContainer {
+        width:auto;
+        margin: 0px 30px 0px 30px;
+    }
+}
