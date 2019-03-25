@@ -1,9 +1,9 @@
-.Skills {
+.Education {
     overflow: hidden;
     padding: 100px 0px 100px 0px;
 }
 
-.SkillsContainer {
+.EducationContainer {
     width: 96%;
     max-width: 1080px;
     margin: 0 auto;
@@ -12,17 +12,17 @@
     /* margin-bottom:200px; */
 }
 
-.Skills p {
+.Education p {
     color:#4d4d4d;
 }
 
-.Skills h1 {
+.Education h1 {
     color:black;
     font-weight: 400;
     margin-top:0px;
 }
 
-.skillsParagraph {
+.EducationParagraph {
     /* display: inline-block; */
     width:100%;
     /* float:left; */
@@ -30,18 +30,18 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .Skills {
+    .Education {
         padding: 20px 0px 20px 0px;
     }
 
-    .SkillsContainer {
+    .EducationContainer {
         width:600px;
         padding: 0px;
     }
 }
 
 @media screen and (max-width: 630px) {
-    .SkillsContainer {
+    .EducationContainer {
         width:auto;
         margin: 0px 30px 0px 30px;
     }

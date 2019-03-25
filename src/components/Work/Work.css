@@ -1,9 +1,10 @@
-.Skills {
+.Work {
     overflow: hidden;
     padding: 100px 0px 100px 0px;
+    background-color: #f9f9f9;
 }
 
-.SkillsContainer {
+.WorkContainer {
     width: 96%;
     max-width: 1080px;
     margin: 0 auto;
@@ -12,17 +13,17 @@
     /* margin-bottom:200px; */
 }
 
-.Skills p {
+.Work p {
     color:#4d4d4d;
 }
 
-.Skills h1 {
+.Work h1 {
     color:black;
     font-weight: 400;
     margin-top:0px;
 }
 
-.skillsParagraph {
+.WorkParagraph {
     /* display: inline-block; */
     width:100%;
     /* float:left; */
@@ -30,18 +31,18 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .Skills {
+    .Work {
         padding: 20px 0px 20px 0px;
     }
 
-    .SkillsContainer {
+    .WorkContainer {
         width:600px;
         padding: 0px;
     }
 }
 
 @media screen and (max-width: 630px) {
-    .SkillsContainer {
+    .WorkContainer {
         width:auto;
         margin: 0px 30px 0px 30px;
     }
