@@ -1,0 +1,20 @@
+.qualificationList {
+    margin: 2px 0px 2px 0px;
+}
+
+.Qualification h1 {
+    font-size: 16pt;
+}
+
+.Qualification h2 {
+    font-size: 12pt;
+    text-decoration: none;
+}
+
+.separator {
+    width: 90%;
+    border-bottom:1px solid #e9e9e9;
+    margin: 0 auto;
+    margin-top: 30px !important;
+    margin-bottom:40px !important;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import Qualification from './Qualification/Qualification';
 import './Education.css';
 
 const education = (props) => {
@@ -7,8 +8,15 @@ const education = (props) => {
         <section className="Education">
             <div className="EducationContainer">
                 <div className="EducationParagraph">
-                    <h1>Education</h1>
-                    <p>{props.educationData[0].description}</p><br /><br />
+                    <h1>Education</h1><br />
+
+                    {props.educationData.map((qualification, index) => {
+                        return (
+                            <div>
+                                <Qualification qualData={props.educationData[index]} numQual={props.educationData.length} current={index} />
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

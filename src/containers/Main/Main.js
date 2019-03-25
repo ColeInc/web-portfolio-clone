@@ -35,7 +35,24 @@ class Main extends Component {
                 employer: '',
                 businessSector: '',
                 summary: ""
-            }]  
+            }],
+            "education": [{
+                institution: '',
+                qualification: [
+                    '', 
+                    '', 
+                    ''
+                ],
+                date: ''
+            }, {
+                institution: '',
+                qualification: [
+                    '', 
+                    '', 
+                    ''
+                ],
+                date: ''
+            }] 
         }
 
         const Andy = {
@@ -65,7 +82,24 @@ class Main extends Component {
                 employer: '',
                 businessSector: '',
                 summary: ""
-            }]
+            }],
+            "education": [{
+                institution: '',
+                qualification: [
+                    '', 
+                    '', 
+                    ''
+                ],
+                date: ''
+            }, {
+                institution: '',
+                qualification: [
+                    '', 
+                    '', 
+                    ''
+                ],
+                date: ''
+            }] 
         }
 
         const Cole = {
@@ -95,7 +129,30 @@ class Main extends Component {
                 employer: 'Jeremy Johnson, Rocketspark Ltd.',
                 businessSector: 'Web Development',
                 summary: 'This work experience opportunity included completing numerous tasks working along side a small team of web developers. Involved creating / editing HTML and CSS of webpages.'
-            }]            
+            }, {
+                company: 'NS and JL Farms Ltd.',
+                position: 'Dairy Farm Assistant',
+                location: 'Horsham Downs, Hamilton, New Zealand',
+                date: 'Pre-February 2016',
+                employer: 'Nick McConnell, Neil McConnell',
+                businessSector: 'Dairy / Agriculture Industry',
+                summary: "Included milking, operating numerous types of machinery, performing assigned tasks individually, and good communication with other staff members."
+            }],
+            "education": [{
+                institution: 'The University of Auckland',
+                qualification: [
+                    'Bachelor of Science majoring in Information Systems and Computer Science'
+                ],
+                date: '2016 - February 2019'
+            }, {
+                institution: "Hamilton Boys' High School",
+                qualification: [
+                    'NCEA Level 3 (Endorsed with Merit)', 
+                    'NCEA Level 2 (Endorsed with Merit)', 
+                    'NCEA Level 1 (Endorsed with Merit)'
+                ],
+                date: '2013 - 2015'
+            }]        
         }
 
         return (

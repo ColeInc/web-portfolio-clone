@@ -9,9 +9,8 @@ const work = (props) => {
             <div className="WorkContainer">
                 <div className="WorkParagraph">
                     <h1>Work Experience</h1><br />
-                    
                     {props.workData.map((position, index) => {
-                        return <Position positionData={props.workData[index]} />
+                        return <Position positionData={props.workData[index]} numPosition={props.workData.length} current={index} />
                     })}
                 </div>
             </div>
