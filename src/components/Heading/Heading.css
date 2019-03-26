@@ -1,0 +1,51 @@
+.Heading {
+    background-color:#333333;
+    overflow: hidden;
+    padding: 100px 0px 100px 0px;
+}
+
+.HeadingContainer {
+    width: 96%;
+    max-width: 1080px;
+    margin: 0 auto;
+    overflow:hidden;
+}
+
+.Heading p {
+    color:#b3b3b3;
+}
+
+.Heading h1 {
+    color:white;
+    font-weight: 400;
+    margin-top:0px;
+}
+
+.HeadingParagraph {
+    width:100%;
+    /* border-bottom: 1px solid #cccccc; */
+}
+
+.headingUnderline {
+    width: 30%;
+    border-bottom:1px solid #cccccc;
+    margin-bottom:20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .Heading {
+        padding: 20px 0px 20px 0px;
+    }
+
+    .HeadingContainer {
+        width:600px;
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .HeadingContainer {
+        width:auto;
+        margin: 0px 30px 0px 30px;
+    }
+}

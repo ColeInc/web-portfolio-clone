@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 
-//import Person from './Person/Person';
 import Home from './Home/Home';
 import Profile from './Profile/Profile';
+import Project from './Project/Project';
 import './Main.css';
 
 class Main extends Component {
@@ -39,20 +39,20 @@ class Main extends Component {
             "education": [{
                 institution: '',
                 qualification: [
-                    '', 
-                    '', 
+                    '',
+                    '',
                     ''
                 ],
                 date: ''
             }, {
                 institution: '',
                 qualification: [
-                    '', 
-                    '', 
+                    '',
+                    '',
                     ''
                 ],
                 date: ''
-            }] 
+            }]
         }
 
         const Andy = {
@@ -86,20 +86,20 @@ class Main extends Component {
             "education": [{
                 institution: '',
                 qualification: [
-                    '', 
-                    '', 
+                    '',
+                    '',
                     ''
                 ],
                 date: ''
             }, {
                 institution: '',
                 qualification: [
-                    '', 
-                    '', 
+                    '',
+                    '',
                     ''
                 ],
                 date: ''
-            }] 
+            }]
         }
 
         const Cole = {
@@ -147,17 +147,37 @@ class Main extends Component {
             }, {
                 institution: "Hamilton Boys' High School",
                 qualification: [
-                    'NCEA Level 3 (Endorsed with Merit)', 
-                    'NCEA Level 2 (Endorsed with Merit)', 
+                    'NCEA Level 3 (Endorsed with Merit)',
+                    'NCEA Level 2 (Endorsed with Merit)',
                     'NCEA Level 1 (Endorsed with Merit)'
                 ],
                 date: '2013 - 2015'
-            }]        
+            }]
+        }
+
+        const FooterData = {
+            footerParagraph: "This website was designed and developed by Cole McConnell and Andy T H Baeck, utilising the React Javascript Library.",
+            "andy": {
+                email: 'hamento22@outlook.co.nz',
+                linkedin: 'https://www.linkedin.com/in/taehyun-baeck-94257a121/',
+                github: 'https://github.com/decidev22'
+            },
+            "cole": {
+                email: 'cmcc549@aucklanduni.ac.nz',
+                linkedin: 'https://www.linkedin.com/in/cole-mcconnell-b7972b151/',
+                github: 'https://github.com/ColeInc'
+            }
+        }
+            
+        const ProjectData = {
+            name: 'Web Portfolio',
+            summary: 'This project was an idea that was thought up within our final semester of Computer Science at the University of Auckland. Our main reasoning for the project was to utilise the existing knowledge we had within HTML, CSS, and Javascript, and from there take this project a step further by implementing it using the React Javascript Framework.',
+            author: 'Cole McConnell & Andy T H Baeck'
         }
 
         return (
             <div className="Main">
-                <header className="Header">
+                <div className="Header">
                     <nav>
                         <ul>
                             <Link to="/"><li>Home</li></Link>
@@ -175,15 +195,11 @@ class Main extends Component {
                             </Link>
                         </ul>
                     </nav>
-                </header>
+                </div>
                 <Route path="/" exact component={Home} />
-
-                {/* <Route path="/andy" exact render={() => <About name={andy} />} /> */}
-                {/* <Route path="/andy" exact render={props => <About name={Andy.about[0].name} desc={Andy.about[0].desc} phone={Andy.about[0].phone} email={Andy.about[0].email} />} /> */}
-                <Route path="/andy" exact render={props => <Profile profileData={Andy} />} />
-                <Route path="/cole" exact render={props => <Profile profileData={Cole} />} />
-                {/* <Route path="/cole" exact render={props => <About name={Cole.about[0].name} desc={Cole.about[0].desc} phone={Cole.about[0].phone} email={Cole.about[0].email} />} /> */}
-                {/* <Route path="/project" exact component={} /> */}
+                <Route exact path="/andy" render={props => <Profile profileData={Andy} footerData={FooterData} />} />
+                <Route exact path="/cole" render={props => <Profile profileData={Cole} footerData={FooterData} />} />
+                <Route exact path="/project" render={props => <Project projectData={ProjectData} footerData={FooterData} />} />
                 {/* <Route path="/" render={() => <p>Test</p>} /> */}
             </div>
         );

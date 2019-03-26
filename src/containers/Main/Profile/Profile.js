@@ -1,4 +1,3 @@
-//import React, { Component } from 'react';
 import React from 'react';
 import './Profile.css';
 
@@ -8,7 +7,6 @@ import Work from '../../../components/Work/Work';
 import Education from '../../../components/Education/Education';
 import Footer from '../../../components/Footer/Footer';
 
-//class Start extends Component {
 const profile = (props) => {
 
     return (
@@ -17,11 +15,9 @@ const profile = (props) => {
             <Skills skillsData={props.profileData.skills} />
             <Work workData={props.profileData.work} />
             <Education educationData={props.profileData.education} />
-            {/* <Footer footerInfo={props.footerParagraph} /> */}
-            <Footer />
+            <Footer footerData={props.footerData} />
         </div>
     );
 }
-// }
 
 export default profile;

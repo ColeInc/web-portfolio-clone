@@ -9,26 +9,57 @@
     max-width: 1080px;
     margin: 0 auto;
     overflow:hidden;
-    /* background-color:red; */
-    /* margin-bottom:200px; */
 }
 
 .Footer p {
     color:#b3b3b3;
+    margin: 0px 0px 0px 0px;
 }
 
 .Footer h1 {
-    color:#cccccc;
+    color:#808080;
     font-weight: 400;
     margin-top:0px;
+    margin-bottom: 10px;
 }
 
-/* .FooterParagraph { */
-    /* display: inline-block; */
-    /* width:100%; */
+.FooterSummary {
+    display: inline-block;
     /* float:left; */
-    /* border-bottom: 1px solid #d9d9d9; */
-/* } */
+    width:42%;
+    vertical-align: top;
+    padding:10px;
+    margin-right:130px;
+}
+
+.FooterAndy,
+.FooterCole {
+    display: inline-block;
+    width:17%;
+    padding:10px;
+    /* float:right; */
+}
+
+.fa-envelope,
+.fa-linkedin,
+.fa-github {
+    font-size: 32pt;
+    color: #4d4d4d;
+    margin:0px 10px 0px 0px;
+    display:inline;
+}
+
+.fa-envelope:hover,
+.fa-linkedin:hover,
+.fa-github:hover {
+    color: #737373;
+}
+
+.headingUnderline {
+    width: 35%;
+    border-bottom:1px solid #b3b3b3;
+    margin-bottom:20px;
+}
 
 @media screen and (max-width: 1000px) {
     .Footer {
@@ -39,11 +70,53 @@
         width:600px;
         padding: 0px;
     }
+
+    .FooterSummary {
+        display: block;
+        /* float:left; */
+        width:100%;
+        /* vertical-align: top; */
+        padding:10px 0px 20px 0px;
+        /* margin-right:130px; */
+    }
+
+    .FooterAndy,
+    .FooterCole {
+        display:inline-block;
+        width:220px;
+        padding:0px;
+    }
+
+    .headingUnderline {
+        margin-bottom:10px !important;
+    }
 }
 
 @media screen and (max-width: 630px) {
     .FooterContainer {
         width:auto;
         margin: 0px 30px 0px 30px;
+    }
+
+    .FooterAndy,
+    .FooterCole {
+        display:block;
+        width:100%;
+        padding:0px;
+        margin-bottom:20px;
+    }
+
+    .Footer h1 {
+        font-size: 12pt;
+    }
+
+    .fa-envelope,
+    .fa-linkedin,
+    .fa-github {
+        font-size: 20pt;
+    }
+
+    .headingUnderline {
+        margin-bottom:10px !important;
     }
 }

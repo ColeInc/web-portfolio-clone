@@ -14,6 +14,7 @@ const about = (props) => {
             <div className="AboutContainer">
                 <div className="paragraph">
                     <h1>{props.aboutData[0].name}</h1>
+                    <div className="headingUnderline"></div>
                     <p>{props.aboutData[0].desc}</p><br />
                     <h2>Contact</h2>
                     <p>
