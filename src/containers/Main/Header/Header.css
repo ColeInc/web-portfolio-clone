@@ -1,0 +1,26 @@
+.Header ul {
+    list-style: none;
+    background-color: #404040;
+    margin: 0px;
+    padding: 0px;
+}
+
+.Header li {
+    display: inline-block;
+    background-color: #404040;
+    padding:20px 30px 20px 30px;
+    color:white;
+}
+
+.Header li:hover,
+.Header li:active {
+    display: inline-block;
+    background-color: #1a1a1a;
+    padding:20px 30px 20px 30px;
+}
+
+.Header a {
+    text-decoration: none;
+    /* display:block; */
+    color:white;
+}

@@ -73,11 +73,8 @@
 
     .FooterSummary {
         display: block;
-        /* float:left; */
         width:100%;
-        /* vertical-align: top; */
         padding:10px 0px 20px 0px;
-        /* margin-right:130px; */
     }
 
     .FooterAndy,
@@ -107,16 +104,12 @@
     }
 
     .Footer h1 {
-        font-size: 12pt;
+        font-size: 14pt;
     }
 
     .fa-envelope,
     .fa-linkedin,
     .fa-github {
         font-size: 20pt;
-    }
-
-    .headingUnderline {
-        margin-bottom:10px !important;
     }
 }

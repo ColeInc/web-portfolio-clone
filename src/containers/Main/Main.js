@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
+import { StickyContainer, Sticky } from 'react-sticky';
 
 import Home from './Home/Home';
 import Profile from './Profile/Profile';
 import Project from './Project/Project';
+import Header from './Header/Header';
 import './Main.css';
 
 class Main extends Component {
@@ -168,7 +170,7 @@ class Main extends Component {
                 github: 'https://github.com/ColeInc'
             }
         }
-            
+
         const ProjectData = {
             name: 'Web Portfolio',
             summary: 'This project was an idea that was thought up within our final semester of Computer Science at the University of Auckland. Our main reasoning for the project was to utilise the existing knowledge we had within HTML, CSS, and Javascript, and from there take this project a step further by implementing it using the React Javascript Framework.',
@@ -176,32 +178,18 @@ class Main extends Component {
         }
 
         return (
-            <div className="Main">
-                <div className="Header">
-                    <nav>
-                        <ul>
-                            <Link to="/"><li>Home</li></Link>
-                            <Link to={{
-                                pathname: '/andy',
-                                hash: '', //this is for any hashtag to implement on the end of the URL, E.g. #submit that you sometimes see, etc. I think this is basically jumping to a certain place on a page, E.g. jump to section 4 half way down the page named #section4
-                                search: '' //similar to above, this is for any search query parameters, E.g. quick-submit=true that may be helpful in a search function.
-                            }}><li>Andy</li>
-                            </Link>
-                            <Link to={{ pathname: '/cole' }}>
-                                <li>Cole</li>
-                            </Link>
-                            <Link to={{ pathname: '/project' }}>
-                                <li>Project</li>
-                            </Link>
-                        </ul>
-                    </nav>
+            <StickyContainer>
+                <Sticky>
+                    {({ style }) => <div style={{ ...style }}><Header /></div>}
+                </Sticky>
+                <div className="Main">
+                    <Route path="/" exact component={Home} />
+                    <Route exact path="/andy" render={props => <Profile profileData={Andy} footerData={FooterData} />} />
+                    <Route exact path="/cole" render={props => <Profile profileData={Cole} footerData={FooterData} />} />
+                    <Route exact path="/project" render={props => <Project projectData={ProjectData} footerData={FooterData} />} />
+                    {/* <Route path="/" render={() => <p>Test</p>} /> */}
                 </div>
-                <Route path="/" exact component={Home} />
-                <Route exact path="/andy" render={props => <Profile profileData={Andy} footerData={FooterData} />} />
-                <Route exact path="/cole" render={props => <Profile profileData={Cole} footerData={FooterData} />} />
-                <Route exact path="/project" render={props => <Project projectData={ProjectData} footerData={FooterData} />} />
-                {/* <Route path="/" render={() => <p>Test</p>} /> */}
-            </div>
+            </StickyContainer>
         );
     }
 }

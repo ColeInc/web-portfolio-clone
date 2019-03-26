@@ -8,7 +8,6 @@ import Education from '../../../components/Education/Education';
 import Footer from '../../../components/Footer/Footer';
 
 const profile = (props) => {
-
     return (
         <div className="Profile">
             <About aboutData={props.profileData.about} />

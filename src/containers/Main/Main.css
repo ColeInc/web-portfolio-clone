@@ -6,37 +6,3 @@
 .Content p {
     font-weight: none;
 }
-  
-.red {
-    color: red;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.Main ul {
-    list-style: none;
-    background-color: #404040;
-    margin: 0px;
-    padding: 0px;
-}
-
-.Main li {
-    display: inline-block;
-    background-color: #404040;
-    padding:20px 30px 20px 30px;
-}
-
-.Main li:hover,
-.Main li:active {
-    display: inline-block;
-    background-color: #1a1a1a;
-    padding:20px 30px 20px 30px;
-}
-
-.Header a {
-    text-decoration: none;
-    /* display:block; */
-    color:white;
-}
