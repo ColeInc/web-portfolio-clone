@@ -16,7 +16,7 @@ class Main extends Component {
                 desc: '',
                 phone: '',
                 email: '',
-                photoURL: '',
+                // photoURL: require('../../Images/{ PHOTONAMEHERE }.jpg')
             }],
             "skills": [{
                 description: ""
@@ -63,7 +63,7 @@ class Main extends Component {
                 desc: "Hi I'm Andy.",
                 phone: '',
                 email: 'hamento22@outlook.co.nz',
-                photoURL: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'
+                photoURL: require('../../Images/andy.jpg')
             }],
             "skills": [{
                 description: "This is a description of my skillset."
@@ -110,7 +110,7 @@ class Main extends Component {
                 desc: 'As a recent graduate at the University of Auckland studying a BSc, majoring in Information Systems and Computer Science, I am now seeking to pursue a career in software development with correlation to front-end or back-end web development. I am in search of an environment which enables me to enrich and develop my skill set in this field further, while highlighting my solid work ethic, love of problem solving, and time management skills.',
                 phone: '022 409 6224',
                 email: 'cmcc549@aucklanduni.ac.nz',
-                photoURL: 'http://i.imgur.com/zdvqdJS.jpg'
+                photoURL: require('../../Images/cole.jpg')
             }],
             "skills": [{
                 description: "Strong understanding of Python and Java Programming Languages. Experience using HTML, CSS, and Javascript. Knowledge of SQL, C#, MIPS Assembly Language. Experience in functional programming using C#, F# and Javascript. Understanding of React Javascript Library."

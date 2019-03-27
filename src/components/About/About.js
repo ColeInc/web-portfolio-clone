@@ -1,13 +1,10 @@
-//import React, { Component } from 'react';
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import './About.css';
 
-//class Start extends Component {
 const about = (props) => {
-
-    //render() {
-    // console.log(props)
+    const defaultPic = require('../../Images/default.jpg')
+    const imageSrc = props.aboutData[0].photoURL.length > 0 ? props.aboutData[0].photoURL : defaultPic
 
     return (
         <section className="About">
@@ -23,9 +20,7 @@ const about = (props) => {
                     </p>
                 </div>
                 <div className="imageContainer">
-                    {/* <div className="imageDiv" style={{ backgroundImage: `url(${props.photoURL})` }}> */}
-                    {/* <img className='image' src={props.photoURL} alt={props.name} /> */}
-                    <img className='image' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoB4s4td48GN7aFR8WZl0jnYodZKAb_B-7kGWIPiTFhs38HvDt" alt={props.aboutData[0].name} />
+                    <img className='image' src={imageSrc} alt={props.aboutData[0].name} />
                 </div>
             </div>
         </section>
