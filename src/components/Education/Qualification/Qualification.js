@@ -6,9 +6,8 @@ const qualification = (props) => {
     return (
         <div className="Qualification">
             <h1>{props.qualData.institution}</h1>
-
             {props.qualData.qualification.map((qual, index) => {
-                return <p className="qualificationList">{qual}</p>
+                return <p className="qualificationList" key={props.qualData.qualification[index]}>{qual}</p>
             })}
             <p><b>Date: </b>{props.qualData.date}</p>
 

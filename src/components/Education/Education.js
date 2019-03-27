@@ -9,11 +9,10 @@ const education = (props) => {
             <div className="EducationContainer">
                 <div className="EducationParagraph">
                     <h1>Education</h1><br />
-
                     {props.educationData.map((qualification, index) => {
                         return (
                             <div>
-                                <Qualification qualData={props.educationData[index]} numQual={props.educationData.length} current={index} />
+                                <Qualification qualData={props.educationData[index]} numQual={props.educationData.length} current={index} key={props.educationData[index].institution} />
                             </div>
                         );
                     })}

@@ -1,26 +1,83 @@
-.Header ul {
-    list-style: none;
+.Header,
+.HeaderMobile {
     background-color: #404040;
+    height:61.33px;
+}
+
+.Header ul,
+.HeaderMobile ul {
+    list-style: none;
     margin: 0px;
     padding: 0px;
 }
 
-.Header li {
+.Header li,
+.HeaderMobile li {
     display: inline-block;
-    background-color: #404040;
     padding:20px 30px 20px 30px;
     color:white;
 }
 
 .Header li:hover,
-.Header li:active {
-    display: inline-block;
+.HeaderMobile li:hover,
+.Header li:active,
+.HeaderMobile li:active {
     background-color: #1a1a1a;
-    padding:20px 30px 20px 30px;
 }
 
-.Header a {
+.Header a,
+.HeaderMobile a {
     text-decoration: none;
-    /* display:block; */
     color:white;
+}
+
+.fa-bars {
+    font-size: 18pt;
+    color: #e6e6e6;
+}
+
+.menuIcon,
+.menuIconClicked {
+    border:none;
+    padding:0px;
+    margin:0px;
+    width:61.3px;
+    height:61.3px;
+    background-color: #404040;
+    display:none;
+}
+
+.menuIcon:hover,
+.menuIconClicked:hover {
+    background-color: #1a1a1a;
+}
+
+.menuIcon:focus,
+.menuIconClicked:focus {
+    outline: none;
+  }
+
+@media screen and (max-width: 630px) {
+    .menuIcon,
+    .menuIconClicked {
+        display:block;
+    }
+
+    .Header ul {
+        display: none;
+    }
+
+    .menuIconClicked {
+        background-color: #1a1a1a;
+    }
+
+    .HeaderMobile li {
+        background-color: #1a1a1a;
+        display:block;
+        width:90px;
+    }
+
+    .HeaderMobile li:hover {
+        background-color: #404040;
+    }
 }

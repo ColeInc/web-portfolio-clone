@@ -97,8 +97,8 @@
 
     .FooterAndy,
     .FooterCole {
-        display:block;
-        width:100%;
+        display:inline-block;
+        width:130px;
         padding:0px;
         margin-bottom:20px;
     }

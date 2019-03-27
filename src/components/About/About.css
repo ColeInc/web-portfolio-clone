@@ -41,8 +41,8 @@
 .paragraph a:hover { color:#a0a0a0; }
 
 .imageContainer {
-    display: inline-block;
-    /* float:right; */
+    /* display: inline-block; */
+    float:right;
     /* background-color:white; */
     vertical-align: top;
     padding-left:60px;

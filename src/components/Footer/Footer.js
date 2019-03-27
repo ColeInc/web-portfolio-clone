@@ -11,7 +11,7 @@ const footer = (props) => {
             <div className="FooterContainer">
                 <div className="FooterSummary">
                     <p>{props.footerData.footerParagraph}</p>
-                    <p style={{ color: '#595959', fontSize: '10pt', marginTop: '5px' }}>&copy; 2019</p>
+                    <p style={{ color: '#595959', fontSize: '10pt', marginTop: '5px' }}>Copyright &copy; 2019</p>
                 </div>
                 <div className="FooterAndy">
                     <h1>Andy</h1>
