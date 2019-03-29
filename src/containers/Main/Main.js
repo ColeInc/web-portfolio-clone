@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+// import { StickyContainer, Sticky } from 'react-sticky';
 import { Route } from 'react-router-dom';
-import { StickyContainer, Sticky } from 'react-sticky';
 
-import Home from './Home/Home';
+// import Home from './Home/Home';
+// import Header from './Header/Header';
+import HomeContainer from './HomeContainer/HomeContainer';
 import Profile from './Profile/Profile';
 import Project from './Project/Project';
-import Header from './Header/Header';
 import './Main.css';
+
 
 class Main extends Component {
     render() {
@@ -18,8 +20,12 @@ class Main extends Component {
                 email: '',
                 // photoURL: require('../../Images/{ PHOTONAMEHERE }.jpg')
             }],
-            "skills": [{
-                description: ""
+            "skills": [{ //make sure to end the paragraph with xx if you want a <br /> on the end of it...
+                description: [
+                    "",
+                    "",
+                    ""
+                ]
             }],
             "work": [{
                 company: '',
@@ -65,8 +71,10 @@ class Main extends Component {
                 email: 'hamento22@outlook.co.nz',
                 photoURL: require('../../Images/andy.jpg')
             }],
-            "skills": [{
-                description: "This is a description of my skillset."
+            "skills": [{ //make sure to end the paragraph with xx if you want a <br /> on the end of it...
+                description: [
+                    "This is a description of my skillset."
+                ]
             }],
             "work": [{
                 company: '',
@@ -112,8 +120,10 @@ class Main extends Component {
                 email: 'cmcc549@aucklanduni.ac.nz',
                 photoURL: require('../../Images/cole.jpg')
             }],
-            "skills": [{
-                description: "Strong understanding of Python and Java Programming Languages. Experience using HTML, CSS, and Javascript. Knowledge of SQL, C#, MIPS Assembly Language. Experience in functional programming using C#, F# and Javascript. Understanding of React Javascript Library."
+            "skills": [{ //make sure to end the paragraph with xx if you want a <br /> on the end of it... sorry this was so stupid to implement LOL
+                description: [
+                    "Strong understanding of Python and Java Programming Languages. Experience using HTML, CSS, and Javascript. Knowledge of SQL, C#, MIPS Assembly Language. Experience in functional programming using C#, F# and Javascript. Understanding of React Javascript Library.xx"
+                ]
             }],
             "work": [{
                 company: 'Agriseeds',
@@ -173,23 +183,36 @@ class Main extends Component {
 
         const ProjectData = {
             name: 'Web Portfolio',
-            summary: 'This project was an idea that was thought up within our final semester of Computer Science at the University of Auckland. Our main reasoning for the project was to utilise the existing knowledge we had within HTML, CSS, and Javascript, and from there take this project a step further by implementing it using the React Javascript Framework.',
+            summary: [ //this is just a list of each paragraph. Make a new list element if you want breaklines between two sentences, etc.
+                       //make sure to end the paragraph with xx if you want a <br /> on the end of it...
+                'This project was an idea that was thought up within our final semester of Computer Science at the University of Auckland. Our main reasoning for the project was to utilise the existing knowledge we had within HTML, CSS, and Javascript, and from there take this project a step further by implementing it using the React Javascript Framework.',
+                'To be continued...xx',
+            ],
             author: 'Cole McConnell & Andy T H Baeck'
         }
 
         return (
-            <StickyContainer>
-                <Sticky>
-                    {({ style }) => <div style={{ ...style }}><Header /></div>}
-                </Sticky>
-                <div className="Main">
-                    <Route path="/" exact component={Home} />
-                    <Route exact path="/andy" render={props => <Profile profileData={Andy} footerData={FooterData} />} />
-                    <Route exact path="/cole" render={props => <Profile profileData={Cole} footerData={FooterData} />} />
-                    <Route exact path="/project" render={props => <Project projectData={ProjectData} footerData={FooterData} />} />
-                    {/* <Route path="/" render={() => <p>Test</p>} /> */}
-                </div>
-            </StickyContainer>
+            <div className="Main">
+                {/* <Route path="/" exact component={HomeContainer} /> */}
+                <Route exact path="/" render={props => <HomeContainer footerData={FooterData} />} />
+                <Route exact path="/andy" render={props => <Profile profileData={Andy} footerData={FooterData} />} />
+                <Route exact path="/cole" render={props => <Profile profileData={Cole} footerData={FooterData} />} />
+                <Route exact path="/project" render={props => <Project projectData={ProjectData} footerData={FooterData} />} />
+                {/* <Route path="/" render={() => <p>Test</p>} /> */}
+            </div>
+
+            // <StickyContainer>
+            //     <Sticky>
+            //         {({ style }) => <div style={{ ...style }}><Header /></div>}
+            //     </Sticky>
+            //     <div className="Main">
+            //         <Route path="/" exact component={Home} />
+            //         <Route exact path="/andy" render={props => <Profile profileData={Andy} footerData={FooterData} />} />
+            //         <Route exact path="/cole" render={props => <Profile profileData={Cole} footerData={FooterData} />} />
+            //         <Route exact path="/project" render={props => <Project projectData={ProjectData} footerData={FooterData} />} />
+            //         {/* <Route path="/" render={() => <p>Test</p>} /> */}
+            //     </div>
+            // </StickyContainer>
         );
     }
 }

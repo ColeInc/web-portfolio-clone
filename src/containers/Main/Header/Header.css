@@ -1,8 +1,15 @@
 .Header,
 .HeaderMobile {
     background-color: #404040;
+    /* background-color: #333333; */
     height:61.33px;
+    /* opacity: 0.5; */
 }
+
+/* .Header p,
+.HeaderMobile p {
+    color:#404040;
+} */
 
 .Header ul,
 .HeaderMobile ul {
@@ -16,6 +23,7 @@
     display: inline-block;
     padding:20px 30px 20px 30px;
     color:white;
+    /* color:#404040; */
 }
 
 .Header li:hover,
