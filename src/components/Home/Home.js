@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import './Home.css';
 
 class Home extends Component {
     render() {
         return (
-            <div className="Home">
+            <section className="Home" id="home">
                 <div className="andySide">
-                    <h2>WEB PORTFOLIO</h2>
+                    <div className="MainHeading"><Link to="/"><h2>WEB PORTFOLIO</h2></Link></div>
+                    <div className="titleUnderline"></div>
                     <Link to={{ pathname: '/andy' }}>
                         <span className="andyButton">
                             <h1>Andy</h1>
@@ -28,9 +29,12 @@ class Home extends Component {
                     <span id="placeholder"></span>
                 </div>
                 <div className="buttonContainer">
-                    <a href="#general"><span className="transitionButton"><FontAwesomeIcon icon={faChevronDown} /></span></a>
+                    <a href="#general"><span className="transitionDown"><FontAwesomeIcon icon={faChevronDown} /></span></a>
                 </div>
-            </div>
+                <div className="buttonContainer">
+                    <a href="#home"><span className="transitionUp"><FontAwesomeIcon icon={faChevronUp} /></span></a>
+                </div>
+            </section>
         );
     }
 }
