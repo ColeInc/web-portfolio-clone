@@ -9,7 +9,7 @@ class App extends Component {
     render() {
         return (
             // <BrowserRouter>
-            <HashRouter>
+            <HashRouter basename={process.env.PUBLIC_URL}>
                 <div className="App">
                     <Main />
                 </div>
