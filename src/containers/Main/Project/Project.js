@@ -5,7 +5,6 @@ import './Project.css';
 import Header from '../Header/Header';
 import Heading from '../../../components/Heading/Heading';
 import General from '../../../components/General/General';
-// import ProjectInfo from '../../../components/ProjectInfo/ProjectInfo';
 import Footer from '../../../components/Footer/Footer';
 
 const project = (props) => {

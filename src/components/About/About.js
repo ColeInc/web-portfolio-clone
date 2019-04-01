@@ -9,23 +9,20 @@ const about = (props) => {
     return (
         <section className="About">
             <div className="AboutContainer">
+                <div className="imageContainer">
+                    <img className='image' src={imageSrc} alt={props.aboutData[0].name} />
+                </div>
                 <div className="paragraph">
                     <h1>{props.aboutData[0].name}</h1>
                     <div className="headingUnderline"></div>
                     <p>{props.aboutData[0].desc}</p><br />
                     <h2>Contact</h2>
-                    <p>
-                        <b>Phone: </b>{props.aboutData[0].phone}<br />
-                        <b>Email: </b><a href={"mailto:" + props.aboutData[0].email}>{props.aboutData[0].email}</a>
-                    </p>
-                </div>
-                <div className="imageContainer">
-                    <img className='image' src={imageSrc} alt={props.aboutData[0].name} />
+                    {props.aboutData[0].phone.length > 0 ? <p><b>Phone: </b>{props.aboutData[0].phone}<br /></p> : null}
+                    <p><b>Email: </b><a href={"mailto:" + props.aboutData[0].email}>{props.aboutData[0].email}</a></p>
                 </div>
             </div>
         </section>
     );
 }
-// }
 
 export default withRouter(about);

@@ -12,8 +12,9 @@ const general = (props) => {
                         return (
                             <div>
                                 {/* <p key={props.generalData[index]}>{paragraph}</p> */}
-                                {console.log(paragraph.slice(-2))}
-                                {paragraph.slice(-2) === "xx" ? <div><p key={props.generalData[index]}>{paragraph.substr(0, paragraph.length-2)}</p><br /></div> : <p key={props.generalData[index]}>{paragraph}</p>}
+                                {/* {console.log(paragraph.slice(-2))} */}
+                                {/* {paragraph.slice(-2) === "xx" ? <div><p key={props.generalData[index]}>{paragraph.substr(0, paragraph.length-2)}</p><br /></div> : <p key={props.generalData[index]}>{paragraph}</p>} */}
+                                {paragraph === "**break**" ? <br /> : <p key={props.generalData[index]}>{paragraph}</p>}
                             </div>
                         );
                     })}

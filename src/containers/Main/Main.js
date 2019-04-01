@@ -20,11 +20,11 @@ class Main extends Component {
                 email: '',
                 // photoURL: require('../../Images/{ PHOTONAMEHERE }.jpg')
             }],
-            "skills": [{ //make sure to end the paragraph with xx if you want a <br /> on the end of it...
+            "skills": [{ //make sure to insert a list value containing '**break**' if you want a <br /> in between two paragraphs or at the end...
                 description: [
                     "",
                     "",
-                    ""
+                    '**break**'
                 ]
             }],
             "work": [{
@@ -71,7 +71,7 @@ class Main extends Component {
                 email: 'hamento22@outlook.co.nz',
                 photoURL: require('../../Images/andy.jpg')
             }],
-            "skills": [{ //make sure to end the paragraph with xx if you want a <br /> on the end of it...
+            "skills": [{ //make sure to insert a list value containing '**break**' if you want a <br /> in between two paragraphs or at the end...
                 description: [
                     "This is a description of my skillset."
                 ]
@@ -120,9 +120,10 @@ class Main extends Component {
                 email: 'cmcc549@aucklanduni.ac.nz',
                 photoURL: require('../../Images/cole.jpg')
             }],
-            "skills": [{ //make sure to end the paragraph with xx if you want a <br /> on the end of it... sorry this was so stupid to implement LOL
+            "skills": [{ //make sure to insert a list value containing '**break**' if you want a <br /> in between two paragraphs or at the end...
                 description: [
-                    "Strong understanding of Python and Java Programming Languages. Experience using HTML, CSS, and Javascript. Knowledge of SQL, C#, MIPS Assembly Language. Experience in functional programming using C#, F# and Javascript. Understanding of React Javascript Library.xx"
+                    "Strong understanding of Python and Java Programming Languages. Experience using HTML, CSS, and Javascript. Knowledge of SQL, C#, MIPS Assembly Language. Experience in functional programming using C#, F# and Javascript. Understanding of React Javascript Library.",
+                    '**break**'
                 ]
             }],
             "work": [{
@@ -186,7 +187,8 @@ class Main extends Component {
             summary: [ //this is just a list of each paragraph. Make a new list element if you want breaklines between two sentences, etc.
                        //make sure to end the paragraph with xx if you want a <br /> on the end of it...
                 'This project was an idea that was thought up within our final semester of Computer Science at the University of Auckland. Our main reasoning for the project was to utilise the existing knowledge we had within HTML, CSS, and Javascript, and from there take this project a step further by implementing it using the React Javascript Framework.',
-                'To be continued...xx',
+                'To be continued...',
+                '**break**'
             ],
             author: 'Cole McConnell & Andy T H Baeck'
         }

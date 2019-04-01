@@ -25,7 +25,6 @@
 
 .FooterSummary {
     display: inline-block;
-    /* float:left; */
     width:42%;
     vertical-align: top;
     padding:10px;
@@ -37,7 +36,6 @@
     display: inline-block;
     width:17%;
     padding:10px;
-    /* float:right; */
 }
 
 .fa-envelope,
@@ -85,7 +83,7 @@
     }
 
     .headingUnderline {
-        margin-bottom:10px !important;
+        margin-bottom:10px;
     }
 }
 
