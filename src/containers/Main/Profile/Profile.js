@@ -11,15 +11,6 @@ import Footer from '../../../components/Footer/Footer';
 
 const profile = (props) => {
     return (
-        // <div className="Profile">
-        //     <About aboutData={props.profileData.about} />
-        //    // <Skills skillsData={props.profileData.skills} />
-        // <General generalData={props.profileData.skills[0].description} heading="Skills" />
-        //     <Work workData={props.profileData.work} />
-        //     <Education educationData={props.profileData.education} />
-        //     <Footer footerData={props.footerData} />
-        // </div>
-
         <StickyContainer>
             <Sticky>
                 {({ style }) => <div style={{ ...style }}><Header /></div>}

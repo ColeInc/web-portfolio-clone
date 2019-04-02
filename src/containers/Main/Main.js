@@ -1,67 +1,63 @@
 import React, { Component } from 'react';
-// import { StickyContainer, Sticky } from 'react-sticky';
 import { Route } from 'react-router-dom';
 
-// import Home from './Home/Home';
-// import Header from './Header/Header';
 import HomeContainer from './HomeContainer/HomeContainer';
 import Profile from './Profile/Profile';
 import Project from './Project/Project';
 import './Main.css';
 
-
 class Main extends Component {
     render() {
-        const Layout = {
-            'about': [{
-                name: '',
-                desc: '',
-                phone: '',
-                email: '',
-                // photoURL: require('../../Images/{ PHOTONAMEHERE }.jpg')
-            }],
-            "skills": [{ //make sure to insert a list value containing '**break**' if you want a <br /> in between two paragraphs or at the end...
-                description: [
-                    "",
-                    "",
-                    '**break**'
-                ]
-            }],
-            "work": [{
-                company: '',
-                position: '',
-                location: '',
-                date: '',
-                employer: '',
-                businessSector: '',
-                summary: ""
-            }, {
-                company: '',
-                position: '',
-                location: '',
-                date: '',
-                employer: '',
-                businessSector: '',
-                summary: ""
-            }],
-            "education": [{
-                institution: '',
-                qualification: [
-                    '',
-                    '',
-                    ''
-                ],
-                date: ''
-            }, {
-                institution: '',
-                qualification: [
-                    '',
-                    '',
-                    ''
-                ],
-                date: ''
-            }]
-        }
+        // const Layout = {
+        //     'about': [{
+        //         name: '',
+        //         desc: '',
+        //         phone: '',
+        //         email: '',
+        //         // photoURL: require('../../Images/{ PHOTONAMEHERE }.jpg')
+        //     }],
+        //     "skills": [{ //make sure to insert a list value containing '**break**' if you want a <br /> in between two paragraphs or at the end...
+        //         description: [
+        //             "",
+        //             "",
+        //             '**break**'
+        //         ]
+        //     }],
+        //     "work": [{
+        //         company: '',
+        //         position: '',
+        //         location: '',
+        //         date: '',
+        //         employer: '',
+        //         businessSector: '',
+        //         summary: ""
+        //     }, {
+        //         company: '',
+        //         position: '',
+        //         location: '',
+        //         date: '',
+        //         employer: '',
+        //         businessSector: '',
+        //         summary: ""
+        //     }],
+        //     "education": [{
+        //         institution: '',
+        //         qualification: [
+        //             '',
+        //             '',
+        //             ''
+        //         ],
+        //         date: ''
+        //     }, {
+        //         institution: '',
+        //         qualification: [
+        //             '',
+        //             '',
+        //             ''
+        //         ],
+        //         date: ''
+        //     }]
+        // }
 
         const Andy = {
             "about": [{
@@ -185,7 +181,7 @@ class Main extends Component {
         const ProjectData = {
             name: 'Web Portfolio',
             summary: [ //this is just a list of each paragraph. Make a new list element if you want breaklines between two sentences, etc.
-                       //make sure to end the paragraph with xx if you want a <br /> on the end of it...
+                       //make sure to insert a list value containing '**break**' if you want a <br /> in between two paragraphs or at the end...
                 'This project was an idea that was thought up within our final semester of Computer Science at the University of Auckland. Our main reasoning for the project was to utilise the existing knowledge we had within HTML, CSS, and Javascript, and from there take this project a step further by implementing it using the React Javascript Framework.',
                 'To be continued...',
                 '**break**'
@@ -195,26 +191,12 @@ class Main extends Component {
 
         return (
             <div className="Main">
-                {/* <Route path="/" exact component={HomeContainer} /> */}
                 <Route exact path="/" render={props => <HomeContainer footerData={FooterData} />} />
                 <Route exact path="/andy" render={props => <Profile profileData={Andy} footerData={FooterData} />} />
                 <Route exact path="/cole" render={props => <Profile profileData={Cole} footerData={FooterData} />} />
                 <Route exact path="/project" render={props => <Project projectData={ProjectData} footerData={FooterData} />} />
                 {/* <Route path="/" render={() => <p>Test</p>} /> */}
             </div>
-
-            // <StickyContainer>
-            //     <Sticky>
-            //         {({ style }) => <div style={{ ...style }}><Header /></div>}
-            //     </Sticky>
-            //     <div className="Main">
-            //         <Route path="/" exact component={Home} />
-            //         <Route exact path="/andy" render={props => <Profile profileData={Andy} footerData={FooterData} />} />
-            //         <Route exact path="/cole" render={props => <Profile profileData={Cole} footerData={FooterData} />} />
-            //         <Route exact path="/project" render={props => <Project projectData={ProjectData} footerData={FooterData} />} />
-            //         {/* <Route path="/" render={() => <p>Test</p>} /> */}
-            //     </div>
-            // </StickyContainer>
         );
     }
 }

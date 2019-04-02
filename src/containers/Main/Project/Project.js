@@ -9,20 +9,12 @@ import Footer from '../../../components/Footer/Footer';
 
 const project = (props) => {
     return (
-        // <div className="Profile">
-        //     <Heading name={props.projectData.name} author={props.projectData.author} />
-        //     {/* <ProjectInfo contentData={props.projectData.summary} /> */}
-        //     <General generalData={props.projectData.summary} heading="About the Project" />
-        //     <Footer footerData={props.footerData} />
-        // </div>
-
         <StickyContainer>
             <Sticky>
                 {({ style }) => <div style={{ ...style }}><Header /></div>}
             </Sticky>
             <div className="Profile">
                 <Heading name={props.projectData.name} author={props.projectData.author} />
-                {/* <ProjectInfo contentData={props.projectData.summary} /> */}
                 <General generalData={props.projectData.summary} heading="About the Project" />
                 <Footer footerData={props.footerData} />
             </div>
