@@ -7,7 +7,6 @@ html, body, #placeholder {
 }
 
 .MainHeading h2 {
-    /* font-family: haptik-light,helvetica,"sans-serif"; */
     color:black;
     font-weight: 300;
     font-size: 22pt;
@@ -17,9 +16,10 @@ html, body, #placeholder {
 }
 
 .MainHeading h2:hover {
-    color:#404040;
+    color:#4d4d4d;
     cursor:default;
     transition-duration:0.2s;
+    -webkit-transition-duration: 0.2s;
     -ms-transition-duration: 0.2s;
 }
 
@@ -28,20 +28,76 @@ html, body, #placeholder {
 }
 
 .titleUnderline {
-    /* width: 12.5%; */
     width:212px;
-    border-bottom:1px solid #404040;
+    border-bottom:1px solid #4d4d4d;
     margin-left:28px;
     margin-top:62px;
     position: absolute;
     display:none;
 }
 
+.aboutLink {
+    position: absolute;
+    right:0px;
+    margin:26px 32px 0px 0px;
+}
+
+.aboutLink h3,
+.aboutLink a {
+    text-decoration: none;
+    font-weight: 300;
+    font-size:14pt;
+    color: #404040;
+    margin-top:0px;
+    margin-bottom: 0px;
+}
+
+.aboutLink h3:hover {
+    color:#808080;
+    cursor:default;
+    transition-duration:0.2s;
+    -webkit-transition-duration: 0.2s;
+    -ms-transition-duration: 0.2s;
+}
+
+.aboutLink:hover ~ .linkUnderline {
+    display:block;
+}
+
+.linkUnderline {
+    border-bottom:1px solid #999999;
+    width:57.5px;
+    right:32.5px;
+    top:50px;
+    position: absolute;
+    display:none;
+}
+
+.author {
+    position: absolute;
+    right:0px;
+    bottom:0px;
+    margin:0px 28px 8px 0px;
+}
+
+.author p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: thin;
+    color: #737373;
+    font-size:11pt;
+}
+
+.author p:hover {
+    color: #404040;
+    cursor: default;
+    transition-duration:0.2s;
+    -webkit-transition-duration: 0.2s;
+    -ms-transition-duration: 0.2s;
+}
+
 span h1 {
     color:white; /* for some reason Main.css is overridding this component's CSS... */
     font-weight: 300;
-    /* margin-top: 120px; */
-    /* vertical-align:middle; */
 }
 
 .andySide,
@@ -58,18 +114,20 @@ span h1 {
 
 .andyButton,
 .coleButton {
-    /* background-color: #404040; */
     border: 1px solid #4b4b4b;
-    /* padding:250px 120px 260px 120px; */
     padding:182px 200px 182px 200px;
+    transition:0.2s;
+    -webkit-transition: 0.2s;
+    -ms-transition: 0.2s;
 }
 
 .andyButton:hover,
 .coleButton:hover {
     /* background-color: #404040; */
     background-color: #4b4b4b;
-	transition-duration:0.2s;
-    -ms-transition-duration: 0.2s;
+    transition:0.2s;
+    -webkit-transition: 0.2s;
+    -ms-transition: 0.2s;
     cursor: default;
 }
 
@@ -87,7 +145,8 @@ span h1 {
 .andyButton:hover > .nameUnderline,
 .coleButton:hover > .nameUnderline {
     border-bottom:1px solid #fff;
-	transition-duration:0.6s;
+    transition-duration:0.6s;
+    -webkit-transition-duration: 0.6s;
 	-ms-transition-duration: 0.6s;
     width:140%;
 }
@@ -101,28 +160,26 @@ span {
     width: 120%;
     border-bottom:1px solid #4b4b4b;
     margin-bottom:20px;
+    transition:0.2s;
+    -webkit-transition: 0.2s;
+    -ms-transition: 0.2s;
 }
 
 .buttonContainer {
     width:100%;
     margin: 0 auto;
-    /* background-color:red; */
     position: absolute;
     /* bottom:0; */
 }
 
 .transitionDown {
     /* border: 1px solid #fff; */
-    background-color:#404040;
+    background-color:#4d4d4d;
     color:#fff;
     border-radius: 50%;
     padding:10px;
     width:20px;
-    /* position: absolute; */
     bottom:20px;
-    /* margin:0 49% 0 49%; */
-    /* margin-left:48.8% */
-    /* left:48.83%; */
     position: absolute;
     left: 50%;
     transform: translateX(-50%)
@@ -130,7 +187,7 @@ span {
 
 .transitionUp {
     /* border: 1px solid #404040; */
-    background-color:#404040;
+    background-color:#4d4d4d;
     color:#fff;
     border-radius: 50%;
     padding:10px;
@@ -147,7 +204,8 @@ span {
     background-color: #fff;
     color:#404040;
     padding:8.5px;
-	transition-duration:0.2s;
+    transition-duration:0.2s;
+    -webkit-transition-duration: 0.2s;
     -ms-transition-duration: 0.2s;
 }
 
@@ -172,6 +230,11 @@ span {
         margin-bottom:0px;
         margin-top:0px;
         margin-left:8px;
+    }
+
+    .aboutLink,
+    .author {
+        display:none;
     }
 
     .andyButton h1,

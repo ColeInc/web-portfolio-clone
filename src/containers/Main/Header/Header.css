@@ -31,6 +31,9 @@
 .Header li:active,
 .HeaderMobile li:active {
     background-color: #1a1a1a;
+    transition-duration:0.2s;
+    -webkit-transition-duration: 0.2s;
+    -ms-transition-duration: 0.2s;
 }
 
 .Header a,

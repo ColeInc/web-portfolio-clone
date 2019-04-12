@@ -20,13 +20,16 @@ class Home extends Component {
                     <span id="placeholder"></span>
                 </div>
                 <div className="coleSide">
+                <div className="aboutLink"><Link to="/project"><h3>ABOUT</h3></Link></div>
+                <div className="linkUnderline"></div>
                     <Link to={{ pathname: '/cole' }}>
                         <span className="coleButton">
                             <h1>Cole</h1>
                             <div className="nameUnderline"></div>
                         </span>
                     </Link>
-                    <span id="placeholder"></span>
+                    <span id="placeholder"><div className="author"><p>Designed by Cole McConnell.</p></div></span>
+                    
                 </div>
                 <div className="buttonContainer">
                     <a href="#general"><span className="transitionDown"><FontAwesomeIcon icon={faChevronDown} /></span></a>

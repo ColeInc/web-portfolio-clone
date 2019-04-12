@@ -69,7 +69,7 @@ class Main extends Component {
             }],
             "skills": [{ //make sure to insert a list value containing '**break**' if you want a <br /> in between two paragraphs or at the end...
                 description: [
-                    "This is a description of my skillset."
+                    "This is a description of my skill set."
                 ]
             }],
             "work": [{
@@ -165,7 +165,7 @@ class Main extends Component {
         }
 
         const FooterData = {
-            footerParagraph: "This website was designed and developed by Cole McConnell and Andy T H Baeck, utilising the React Javascript Library.",
+            footerParagraph: "This website was designed and developed by Cole McConnell, utilising the React Javascript Library.",
             "andy": {
                 email: 'hamento22@outlook.co.nz',
                 linkedin: 'https://www.linkedin.com/in/taehyun-baeck-94257a121/',
